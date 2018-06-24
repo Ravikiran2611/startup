@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>LOGIN</title>
+<style>
+.one{
+ position: absolute;
+ width: 100%;
+ height:100px;
+ background-color: grey;
+ top: 0px;
+ left:0px;
+ text-shadow: 5px 5px  4px black;
+ color: white;
+ }
+ .container{
+ width:960px;
+ margin: 0px auto;
+ }
+.two{
+  position: relative;
+  padding-top: 6px;
+  font-size:35px;
+  }  
+  .three{
+  position: absolute;
+   top: 0px;
+   left: 600px;
+  float: right;
+  font-size: 19px;
+  
+  }
+li{
+list-style: none;
+color: white;
+float: left ;
+margin: 20px 30px;
+}
+a{
+text-decoration: none;
+color: white;
+}
+.four{
+position: relative;
+top:110px;
+color: black;
+border: 4px solid black ;
+width:300px;
+height:300px;
+background-color: white;
+
+
+}
+body{
+background-color: whitesmoke;
+}
+td:hover{
+background-color:darkgrey;
+}
+marquee{
+direction:left;
+margin:150px;
+width:960px;
+height:20px;
+color: blue;
+}
+</style>
+</head>
+<body>
+<div class = "one">
+    <div class="container">
+	
+	<div> 
+    <h1 class="two">SOLO LEARN</h1>
+    </div>
+     
+	 <div class="three">
+			<table>
+			<tr>
+			<ul>
+			<td><li><a href="startup.html">HOME</a></li></td>
+			<td><li><a href="signup.html">SIGN UP <a/></li></td>
+			<td><li><a href="login.html">LOG IN <a/></li></td>
+			</ul>
+			</tr>
+			</table>
+	</div> 
+
+	</div>	
+</div>
+	<center>
+	<div class="four">
+	<form>
+	<br><br><br><br>
+
+    <label>USERNAME : <input type="text" id="name" placeholder="ENTER USERNAME"></label><br><br><br>
+	<label>PASSWORD : <input type="text" id="pass" placeholder="ENTER  PASSWORD"></label><br><br><br>
+	<input type="button" value="submit" id="bu" onclick="fun()">&nbsp&nbsp&nbsp&nbsp
+	<input type="button" value="cancel" id="can"> 
+	</form>
+	</div>  
+	</center>
+		<center>
+<marquee>FOR ANY FEEDBACK OR SUGGESTION  PLS MAIL US AT sololearn@gmail.com</marquee>
+	</center>
+</body>
+<script>
+function fun()
+{
+
+   var pass1 = /^[a-zA-Z0-9]{8,15}$/;
+    var name1 = /^[a-zA-Z0-9]{4,15}$/;
+    var name = document.getElementById("name").value;
+    var pass = document.getElementById("pass").value;
+      
+   if((name1.test(name)) == false)
+		alert("ENTER A PROPER USERNAME");
+     else if((pass1.test(pass)) == false)
+		alert("ENTER A PROPER PASSWORD");
+	else 
+	alert("SUCCESSFULLY LOGINED");
+ 
+  }
+  
+  
+  
+</script>
+	
+</html>

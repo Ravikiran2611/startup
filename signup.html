@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>LOGIN</title>
+<style>
+.one{
+ position: absolute;
+ width: 100%;
+ height:100px;
+ background-color: gray;
+ top: 0px;
+ left:0px;
+ text-shadow: 5px 5px  4px black;
+ color: white;
+ }
+ .container{
+ width:960px;
+ margin: 0px auto;
+ }
+.two{
+  position: relative;
+  padding-top: 6px;
+  font-size:35px;
+  }  
+  .three{
+  position: absolute;
+   top: 0px;
+   left: 600px;
+  float: right;
+  font-size: 19px;
+  
+  }
+li{
+list-style: none;
+color: white;
+float: left ;
+margin: 20px 30px;
+}
+a{
+text-decoration: none;
+color: white;
+}
+.container2{
+position: relative;
+color: black;
+border: 5px solid black ;
+ width:960px;
+ margin: 0px auto;
+height: 1000;
+top:90px;
+background-color: white;
+}
+body{
+background-color: whitesmoke;
+}
+.a:hover{
+background-color:darkgrey;
+}
+.a{
+}
+</style>
+</head>
+<body>
+<div class = "one">
+    <div class="container">
+	
+	<div> 
+    <h1 class="two">SOLO LEARN</h1>
+    </div>
+     
+	 <div class="three">
+			<table>
+			<tr>
+			<ul>
+			<td class="a"><li><a href="startup.html">HOME</a></li></td>
+			<td class="a"><li><a href="signup.html">SIGN UP <a/></li></td>
+			<td class="a"><li><a href="login.html">LOG IN <a/></li></td>
+			</ul>
+			</tr>
+			</table>
+	</div> 
+	</div>	
+</div> 
+	<center>
+	<div class="container2">
+	<form>
+	<h4>PLEASE FILL THE FOLLOWING DETAILS </h4>
+	<div>
+	<table cellspacing="40px">
+	 <tr><td>NAME: </td><td><input type="text" id="1" placeholder=" enter name"></td></tr>
+	<tr><td>DATE OF BIRTH: </td><td><input type="date" id="2"></td></tr>
+	<tr><td>AGE: </td><td><input type="text" id="3" placeholder=" enter age"></td></tr>
+	<tr><td>EMAIL: </td><td><input type="text" id="4" placeholder=" enter email id "></td></tr>
+	<tr><td>PHONE NUMBER:</td><td><input type="text" id="5" placeholder=" enter mobile number"></td></tr>
+	<tr><td>PASSWORD: </td><td><input type="text" id="6" placeholder=" enter password"></td></tr>
+	<tr><td> RETYPE-PASSWORD: </td><td><input type="text" id="7" placeholder=" enter confirm password"></td></tr>
+	<tr><td>SELECT THE COURSE:</td><td><select id="course" ><option value=""></option><option value="JAVA">JAVA</option>
+	                                   <option value="ANDRIOD APP DEVELOPMENT">ANDRIOD APP DEVELOPMENT</option>
+									   <option value="C">C</option><option value="C++">C++</option>
+									   <option value="JAVASCRIPT">JAVASCRIPT</option><option value="SQL">SQL</option></SELECT>
+	                   
+	<tr><td>AMOUNT TO BE PAID: </td><td><select id="8" ><option value="10000">10000</option></select></td></tr>
+	<tr><td>DURATION: </td><td><select id="9" ><option value="1">1</option></select></td></tr>
+	</table>
+	 <input type="button" id="8" value="submit" onclick="fun()">&nbsp&nbsp&nbsp&nbsp
+	 <input type="button" id="9" value="cancel">&nbsp&nbsp&nbsp&nbsp
+	</form>
+	</div>
+	</div>
+	</center>
+</body>
+<script>
+function fun()
+{
+  var name = document.getElementById("1").value;
+  var age = document.getElementById("3").value;
+  var email = document.getElementById("4").value;
+  var pno = document.getElementById("5").value;
+  var pass = document.getElementById("6").value;
+  var repass = document.getElementById("7").value;
+  var course= document.getElementById("course").value;
+   var name1 = /^[a-zA-Z]{3,20}$/;
+   var age1 = /^[0-9]{1,3}$/;
+   var email1 = /^[a-zA-Z0-9]{5,20}@[a-zA-Z]{1,10}\.[a-zA-Z]{1,10}$/;
+   var pno1 = /^[0-9]{10}$/;
+  
+   
+ if((name1.test(name)) ==  false)
+    alert("ENTER A PROPER NAME");
+ else if( (age1.test(age)) == false)
+   alert("ENTER A PROPER AGE");
+ else if((email1.test(email)) == false)
+   alert("ENTER A PROPER EMAIL");
+ else if((pno1.test(pno)) == false)
+   alert("ENTER A PROPER MOBILE NUMBER");
+ else if(pass != repass)
+   alert("ENTER A PROPER PASWORD");
+  else if( course == "")
+  alert("SELECT A PROPER COURSE");
+   else 
+   alert(" CONGRATS!!!!!!! YOU HAVE SUCCESSFULLY ENROLED FOR THE COURSE   " + course + "  IN OUR SOLOLEARN");
+  }
+  
+  
+  
+</script>
+	
+</html>
